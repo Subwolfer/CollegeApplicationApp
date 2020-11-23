@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Create Account"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.HasNavigationBar="True"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentApplicationApp.Register">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="FirstName" Placeholder="First" PlaceholderColor="Olive" />
+            <Entry x:Name="LastName" Placeholder="Last" PlaceholderColor="Olive" />
+            <Entry x:Name="Street" Placeholder="Street Address" PlaceholderColor="Olive" />
+            <Entry x:Name="City" Placeholder="City" PlaceholderColor="Olive" />
+            <Entry x:Name="State" Placeholder="State" PlaceholderColor="Olive" />
+            <Entry x:Name="Zip" Placeholder="State" PlaceholderColor="Olive" />
+            <Button Text="UploadFile" Clicked="UploadButtonClicked" />
+            <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
+            <Button Text="Cancel" Clicked="CancelButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

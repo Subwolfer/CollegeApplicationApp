@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Create Account"
+             NavigationPage.HasBackButton="false"
+             NavigationPage.HasNavigationBar="True"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentApplicationApp.CreateAccount">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create A New Account" 
+                   HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="EmailField" Placeholder="Email" PlaceholderColor="Olive" />
+            <Entry x:Name="PasswordField" Placeholder="Password" PlaceholderColor="Olive" />
+            <Entry x:Name="ConfirmPasswordField" Placeholder="ConfirmPassword" PlaceholderColor="Olive" />
+            <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
+            <Button Text="Cancel" Clicked="CancelButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

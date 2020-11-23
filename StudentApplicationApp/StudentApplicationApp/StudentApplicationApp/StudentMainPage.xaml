@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Student Home"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="True"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentApplicationApp.StudentMainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="RequestInformation" Clicked="RequestInformationButtonClicked" />
+            <Button Text="Apply" Clicked="ApplyButtonClicked" />
+            <Button Text="LogOut" Clicked="LogOutButtonClicked" />
+            <Button Text="Application Status" Clicked="ApplicationStatusButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

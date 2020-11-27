@@ -6,8 +6,6 @@ namespace StudentApplicationApp
 {
     public class TemporaryStudent : Student
     {
-        public string email;
-
         /// <summary>
         /// Starts the application process
         /// </summary>

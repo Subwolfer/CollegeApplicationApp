@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentApplicationApp.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,9 +50,19 @@ namespace StudentApplicationApp
             return true;
         }
 
-        private bool RetrieveAccountFromDatabase(string email, string password)
+        private async void RetrieveAccountFromDatabase(string email, string password)
         {
-            return true;
+            var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+            var personsCollection = await connection.QueryAsync<Person>($"select * from Person where Email = \"{email}\"");
+            Person user = null;
+
+            if (personsCollection.Any())
+            {
+                user = personsCollection[0];
+            }
+
+            // TODO Pass user into Student Home page.
         }
     }
 }

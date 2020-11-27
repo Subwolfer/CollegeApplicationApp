@@ -22,7 +22,7 @@ namespace StudentApplicationApp
         protected override void OnAppearing()
         {
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            connection.CreateTableAsync<Student>();
+            connection.CreateTableAsync<Person>();
 
             base.OnAppearing();
         }

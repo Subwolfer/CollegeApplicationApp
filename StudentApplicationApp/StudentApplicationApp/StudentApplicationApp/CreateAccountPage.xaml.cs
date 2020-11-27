@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentApplicationApp.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace StudentApplicationApp
             {
                 TemporaryStudent newStudent = new TemporaryStudent()
                 {
-                    email = EmailField.Text,
+                    Email = EmailField.Text,
                 };
 
             }
@@ -72,7 +73,7 @@ namespace StudentApplicationApp
                 return false;
             }
 
-            PostAccountToDatabase(email, password);
+            Person newAccount = new Person(email, password);
 
             return true;
         }
@@ -81,13 +82,6 @@ namespace StudentApplicationApp
         {
             PasswordField.Text = string.Empty;
             ConfirmPasswordField.Text = string.Empty;
-        }
-
-        private bool PostAccountToDatabase(string Email, string password)
-        {
-            // TODO Validate Email isn't already saved to database. 
-            // TODO Save account to database
-            return true;
         }
     }
 }

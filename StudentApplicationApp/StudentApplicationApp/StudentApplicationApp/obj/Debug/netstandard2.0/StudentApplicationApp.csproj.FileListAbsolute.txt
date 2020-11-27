@@ -7,8 +7,6 @@ C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentA
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.AssemblyInfoInputs.cache
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.AssemblyInfo.cs
-C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.csproj.CoreCompileInputs.cache
-C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.dll
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\ref\StudentApplicationApp.dll
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.pdb
@@ -17,3 +15,5 @@ C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentA
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\RequestInformationPage.xaml.g.cs
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\Register.xaml.g.cs
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentMainPage.xaml.g.cs
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.csproj.CoreCompileInputs.cache
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\XamlC.stamp

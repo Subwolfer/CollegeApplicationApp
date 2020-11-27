@@ -4,6 +4,11 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "StudentApplicationApp.Android.dll" comes first in this list. */
 		"StudentApplicationApp.Android.dll",
 		"FormsViewGroup.dll",
+		"SQLite-net.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.android.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"StudentApplicationApp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

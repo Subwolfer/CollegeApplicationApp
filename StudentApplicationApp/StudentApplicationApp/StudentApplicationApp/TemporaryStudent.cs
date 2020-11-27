@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StudentApplicationApp
 {
-    class TemporaryStudent : Student
+    public class TemporaryStudent : Student
     {
         public string email;
 

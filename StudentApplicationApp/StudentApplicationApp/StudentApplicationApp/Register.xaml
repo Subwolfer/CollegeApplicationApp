@@ -15,7 +15,7 @@
             <Entry x:Name="Street" Placeholder="Street Address" PlaceholderColor="Olive" />
             <Entry x:Name="City" Placeholder="City" PlaceholderColor="Olive" />
             <Entry x:Name="State" Placeholder="State" PlaceholderColor="Olive" />
-            <Entry x:Name="Zip" Placeholder="State" PlaceholderColor="Olive" />
+            <Entry x:Name="Zip" Placeholder="Zip" PlaceholderColor="Olive" />
             <Button Text="UploadFile" Clicked="UploadButtonClicked" />
             <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
             <Button Text="Cancel" Clicked="CancelButtonClicked" />

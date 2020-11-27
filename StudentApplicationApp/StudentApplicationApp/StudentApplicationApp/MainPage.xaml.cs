@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentApplicationApp.Persistence;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,14 @@ namespace StudentApplicationApp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            connection.CreateTableAsync<Student>();
+
+            base.OnAppearing();
         }
 
         private async void RequestInfoButtonClicked(object sender, EventArgs e)

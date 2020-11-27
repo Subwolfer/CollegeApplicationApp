@@ -1,11 +1,18 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace StudentApplicationApp
 {
-    class Student : IPerson
+    public class Student : IPerson
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [MaxLength(255)]
+        public string Name { get; set; }
+
         /// <summary>
         /// Request informationt to be sent about a specific class
         /// </summary>

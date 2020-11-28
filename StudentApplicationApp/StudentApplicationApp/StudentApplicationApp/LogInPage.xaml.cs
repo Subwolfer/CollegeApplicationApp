@@ -58,7 +58,14 @@ namespace StudentApplicationApp
                 Student user = personsCollection[0];
                 if (user.Password == password)
                 {
-                    await Navigation.PushAsync(new StudentMainPage(user));
+                    if (user.isStaff)
+                    {
+                        await Navigation.PushAsync(new StaffMainPage(new Staff(user.Email, user.Password)));
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new StudentMainPage(user));
+                    }
                 }
                 else
                 {

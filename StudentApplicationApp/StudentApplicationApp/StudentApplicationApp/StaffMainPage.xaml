@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Staff Home"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="True"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudentApplicationApp.StaffMainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="ViewApplications" Clicked="ViewApplicationsButtonClicked" />
+            <Button Text="LogOut" Clicked="LogOutButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

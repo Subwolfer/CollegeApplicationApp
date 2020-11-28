@@ -13,8 +13,8 @@
             <Label Text="Create A New Account" 
                    HorizontalOptions="CenterAndExpand"/>
             <Entry x:Name="EmailField" Placeholder="Email" PlaceholderColor="Olive" />
-            <Entry x:Name="PasswordField" Placeholder="Password" PlaceholderColor="Olive" />
-            <Entry x:Name="ConfirmPasswordField" Placeholder="ConfirmPassword" PlaceholderColor="Olive" />
+            <Entry x:Name="PasswordField" IsPassword="true" Placeholder="Password" PlaceholderColor="Olive" />
+            <Entry x:Name="ConfirmPasswordField" IsPassword="true" Placeholder="ConfirmPassword" PlaceholderColor="Olive" />
             <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
             <Button Text="Cancel" Clicked="CancelButtonClicked" />
         </StackLayout>

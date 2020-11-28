@@ -19,6 +19,7 @@
             <Button Text="UploadFile" Clicked="UploadButtonClicked" />
             <Button Text="Submit" Clicked="SubmitRegistration" />
             <Button Text="Cancel" Clicked="CancelButtonClicked" />
+            <Button Text="Save" Clicked="SaveButtonClicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

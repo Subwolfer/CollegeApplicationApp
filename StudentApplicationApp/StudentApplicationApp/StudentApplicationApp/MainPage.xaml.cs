@@ -23,9 +23,8 @@ namespace StudentApplicationApp
         {
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-            // TODO REMOVE THIS LINE
-            // connection.DropTableAsync<Person>();
             connection.CreateTableAsync<Person>();
+            connection.CreateTableAsync<StudentApplication>();
 
             base.OnAppearing();
         }

@@ -16,7 +16,7 @@
             <Label Text="Enter your user name and password to log in" 
                    HorizontalOptions="CenterAndExpand"/>
             <Entry x:Name="EmailField" Placeholder="Email" PlaceholderColor="Olive" />
-            <Entry x:Name="PasswordField" Placeholder="Password" PlaceholderColor="Olive" />
+            <Entry x:Name="PasswordField" IsPassword="true" Placeholder="Password" PlaceholderColor="Olive" />
             <Button Text="Log In" Clicked="LogInButtonClicked" />
             <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
         </StackLayout>

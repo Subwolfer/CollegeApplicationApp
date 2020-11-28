@@ -17,3 +17,7 @@ C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentA
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentMainPage.xaml.g.cs
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationApp.csproj.CoreCompileInputs.cache
 C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\PendingApplicationsPage.xaml.g.cs
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StaffMainPage.xaml.g.cs
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\ApplicationDetailsPage.xaml.g.cs
+C:\Users\subwo\source\repos\StudentApplicationApp\StudentApplicationApp\StudentApplicationApp\obj\Debug\netstandard2.0\StudentApplicationStatusPage.xaml.g.cs

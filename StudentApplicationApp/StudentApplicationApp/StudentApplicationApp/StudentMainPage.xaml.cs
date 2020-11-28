@@ -12,8 +12,7 @@ namespace StudentApplicationApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StudentMainPage : ContentPage
-    {
-        
+    {        
         // Tracks user as a student.
         Student StudentUser { get; set; }
 
@@ -44,7 +43,7 @@ namespace StudentApplicationApp
         /// <param name="e"></param>
         private async void ApplyButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Register());
+            await Navigation.PushAsync(new Register(StudentUser));
         }
 
         /// <summary>
@@ -65,7 +64,7 @@ namespace StudentApplicationApp
         /// <param name="e">Button clicked event args.</param>
         private void ApplicationStatusButtonClicked(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

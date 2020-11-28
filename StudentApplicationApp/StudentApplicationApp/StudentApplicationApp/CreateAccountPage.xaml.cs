@@ -33,7 +33,11 @@ namespace StudentApplicationApp
                     Email = EmailField.Text,
                 };
 
+                this.Navigation.RemovePage(this.Navigation.NavigationStack.Last());
+                LogUserIn(newStudent);
             }
+
+            // create account failed
         }
 
         /// <summary>
@@ -73,9 +77,29 @@ namespace StudentApplicationApp
                 return false;
             }
 
-            Person newAccount = new Person(email, password);
+            try
+            {
+                Person newAccount = new Person(email, password);
+                return true;
+            }
+            // TODO figure out why this exception is not being caught.
+            catch (SQLite.SQLiteException ex)
+            {
+                DisplayAlert("Email in use", $"The email address {email} is already in use", "OK");
+                ClearPasswordFields();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Unkonwn Error", $"An unkonwn error has occured: Details {ex.Message}", "OK");
+                ClearPasswordFields();
+            }
 
-            return true;
+            return false;
+        }
+
+        private async void LogUserIn(TemporaryStudent user)
+        {
+            await Navigation.PushAsync(new StudentMainPage(user));
         }
         
         private void ClearPasswordFields()

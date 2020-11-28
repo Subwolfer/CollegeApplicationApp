@@ -29,13 +29,13 @@ namespace StudentApplicationApp
         }
 
         ///<inheritdoc/>
-        public void CreateAccount()
+        public override void CreateAccount()
         {
 
         }
 
         ///<inheritdoc/>
-        public void Log_In()
+        public override void Log_In()
         {
 
         }

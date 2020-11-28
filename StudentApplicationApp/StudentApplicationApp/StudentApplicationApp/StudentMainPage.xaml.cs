@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentApplicationApp.Persistence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,17 @@ namespace StudentApplicationApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StudentMainPage : ContentPage
     {
-        public StudentMainPage()
+        
+        // Tracks user as a student.
+        Student StudentUser { get; set; }
+
+        /// <summary>
+        /// constructor for student login.
+        /// </summary>
+        /// <param name="user"></param>
+        public StudentMainPage(Student user)
         {
+            StudentUser = user;
             InitializeComponent();
         }
 
@@ -44,6 +54,7 @@ namespace StudentApplicationApp
         /// <param name="e">Button clicked event args.</param>
         private async void LogOutButtonClicked(object sender, EventArgs e)
         {
+            StudentUser = null;
             await Navigation.PopAsync();
         }
 

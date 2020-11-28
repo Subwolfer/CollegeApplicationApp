@@ -23,11 +23,11 @@ namespace StudentApplicationApp
         }
 
         /// <summary>
-        /// Cancels and returns to prior page.
+        /// Submits the registration
         /// </summary>
         /// <param name="sender">Go back button.</param>
         /// <param name="e">Button clicked event args.</param>
-        private void CreateAccountButtonClicked(object sender, EventArgs e)
+        private void SubmitRegistration(object sender, EventArgs e)
         {
             
         }

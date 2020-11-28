@@ -18,12 +18,9 @@ namespace StudentApplicationApp
             InitializeComponent();
         }
 
-        private async void LogInButtonClicked(object sender, EventArgs e)
+        private void LogInButtonClicked(object sender, EventArgs e)
         {
-            if (ValidateLogIn(EmailField.Text, PasswordField.Text))
-            {
-                await Navigation.PushAsync(new StudentMainPage());
-            }
+            ValidateLogIn(EmailField.Text, PasswordField.Text);
         }
 
         private async void CreateAccountButtonClicked(object sender, EventArgs e)
@@ -54,15 +51,33 @@ namespace StudentApplicationApp
         {
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-            var personsCollection = await connection.QueryAsync<Person>($"select * from Person where Email = \"{email}\"");
-            Person user = null;
+            var personsCollection = await connection.QueryAsync<Student>($"select * from Person where Email = \"{email}\"");
 
             if (personsCollection.Any())
             {
-                user = personsCollection[0];
+                Student user = personsCollection[0];
+                if (user.Password == password)
+                {
+                    await Navigation.PushAsync(new StudentMainPage(user));
+                }
+                else
+                {
+                    await DisplayAlert("Invalid Password", "Username and password combo is not valid", "OK");
+                    PasswordField.Text = string.Empty;
+                }
             }
+            else
+            {
+                await DisplayAlert("Invalid Email", "Unable to find account with email", "OK");
+                PasswordField.Text = string.Empty;
+            }
+        }
 
-            // TODO Pass user into Student Home page.
+        protected override void OnAppearing()
+        {
+            EmailField.Text = string.Empty;
+            PasswordField.Text = string.Empty;
+            base.OnAppearing();
         }
     }
 }

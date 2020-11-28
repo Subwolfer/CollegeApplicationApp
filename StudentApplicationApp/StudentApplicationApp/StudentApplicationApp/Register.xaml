@@ -17,7 +17,7 @@
             <Entry x:Name="State" Placeholder="State" PlaceholderColor="Olive" />
             <Entry x:Name="Zip" Placeholder="Zip" PlaceholderColor="Olive" />
             <Button Text="UploadFile" Clicked="UploadButtonClicked" />
-            <Button Text="Create Account" Clicked="CreateAccountButtonClicked" />
+            <Button Text="Submit" Clicked="SubmitRegistration" />
             <Button Text="Cancel" Clicked="CancelButtonClicked" />
         </StackLayout>
     </ContentPage.Content>

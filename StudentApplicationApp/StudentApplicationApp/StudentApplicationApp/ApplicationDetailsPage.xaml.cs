@@ -12,9 +12,10 @@ namespace StudentApplicationApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ApplicationDetailsPage : ContentPage
     {
-        public ApplicationDetailsPage()
+        public ApplicationDetailsPage(Student user)
         {
             InitializeComponent();
         }
+
     }
 }

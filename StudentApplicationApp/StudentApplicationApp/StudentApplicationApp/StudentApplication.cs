@@ -1,9 +1,5 @@
 ﻿using SQLite;
 using StudentApplicationApp.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Xamarin.Forms;
 
 namespace StudentApplicationApp
@@ -46,7 +42,9 @@ namespace StudentApplicationApp
 
         public bool submitted { get; set; }
 
-        public bool accepted { get; }
+        public bool applicationFinalized { get; set; }
+
+        public bool accepted { get; set; }
 
         /// <summary>
         /// 0 arg constructor required for SQLite connection

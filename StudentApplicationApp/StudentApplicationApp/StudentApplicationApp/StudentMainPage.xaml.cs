@@ -62,9 +62,9 @@ namespace StudentApplicationApp
         /// </summary>
         /// <param name="sender">Go back button.</param>
         /// <param name="e">Button clicked event args.</param>
-        private void ApplicationStatusButtonClicked(object sender, EventArgs e)
+        private async void ApplicationStatusButtonClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new StudentApplicationStatusPage(StudentUser));
         }
     }
 }

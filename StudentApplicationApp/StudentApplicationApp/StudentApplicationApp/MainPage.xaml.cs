@@ -26,6 +26,11 @@ namespace StudentApplicationApp
             connection.CreateTableAsync<Person>();
             connection.CreateTableAsync<StudentApplication>();
 
+            // The following code is to drop tables so they can be
+            // recreated in case of changes. 
+            // connection.DropTableAsync<Person>();
+            // connection.DropTableAsync<StudentApplication>();
+
             // This line is for testing uses only. It will create a staff log in
             // with the email "staff@school.com"  and password of "password"
             CreateStaffLogIn();

@@ -1,9 +1,6 @@
 ﻿using StudentApplicationApp.Persistence;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -104,8 +101,7 @@ namespace StudentApplicationApp
         }
 
         /// <summary>
-        /// Saves Registration state so it can be loaded from this
-        /// state if the user naviates away from the ocme and comes
+        /// Saves Registration state so it can be loaded from this state if the user naviates away from the ocme and comes
         /// back at a later time.
         /// </summary>
         private void SaveRegistration()
@@ -142,8 +138,7 @@ namespace StudentApplicationApp
         }
 
         /// <summary>
-        /// Fills out the application with any previously
-        /// saved data.
+        /// Fills out the application with any previously saved data.
         /// </summary>
         private void FillFormWithSavedData(StudentApplication savedApplication)
         {

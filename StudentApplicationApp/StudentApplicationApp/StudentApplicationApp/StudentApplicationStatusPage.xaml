@@ -7,9 +7,32 @@
              x:Class="StudentApplicationApp.StudentApplicationStatusPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text=""
+                x:Name="Header"
+                VerticalOptions="Start" 
+                HorizontalOptions= "CenterAndExpand" 
+                FontAttributes="Bold"
+                FontSize="16"/>
+            <Label Text=""
+                x:Name="StudentName"
+                HorizontalOptions= "CenterAndExpand" 
+                FontSize="13"/>
+            <Label Text=""
+                x:Name="Email"
+                HorizontalOptions= "CenterAndExpand" 
+                FontSize="13"/>
+            <Label Text=""
+                x:Name="AddressLine1"
+                HorizontalOptions= "CenterAndExpand" 
+                FontSize="13"/>
+            <Label Text=""
+                x:Name="AddressLien2"
+                HorizontalOptions= "CenterAndExpand" 
+                FontSize="13"/>
+            <Label Text=""
+                x:Name="Status"
+                HorizontalOptions= "CenterAndExpand" 
+                FontSize="13"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

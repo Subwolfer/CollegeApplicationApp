@@ -26,7 +26,28 @@ namespace StudentApplicationApp
             connection.CreateTableAsync<Person>();
             connection.CreateTableAsync<StudentApplication>();
 
+            // This line is for testing uses only. It will create a staff log in
+            // with the email "staff@school.com"  and password of "password"
+            CreateStaffLogIn();
+
             base.OnAppearing();
+        }
+
+        private async void CreateStaffLogIn()
+        {
+            string staffEmail = "staff@school.com";
+            string staffPass = "password";
+
+            var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+
+            // Make sure account doesn't exist before you create it.
+            var personsCollection = await connection.QueryAsync<Person>($"select * from Person where Email = \"{staffEmail}\"");
+            if (!personsCollection.Any())
+            {
+                Person newStaff = new Person(staffEmail, staffPass);
+                newStaff.SetPersonAsStaff();
+                newStaff.OnAdd();
+            }
         }
 
         private async void RequestInfoButtonClicked(object sender, EventArgs e)

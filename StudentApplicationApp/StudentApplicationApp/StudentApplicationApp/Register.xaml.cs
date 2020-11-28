@@ -27,7 +27,7 @@ namespace StudentApplicationApp
         {
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-            var savedApplication = await connection.QueryAsync<StudentApplication>($"select * from Person where Email = \"{email}\"");
+            var savedApplication = await connection.QueryAsync<StudentApplication>($"select * from StudentApplication where Email = \"{email}\"");
 
             if (savedApplication.Any())
             {

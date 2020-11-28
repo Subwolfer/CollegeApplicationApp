@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -34,7 +29,7 @@ namespace StudentApplicationApp
         /// <param name="e">Button clicked event args.</param>
         private async void ViewApplicationsButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(null);
+            await Navigation.PushAsync(new PendingApplicationsPage());
         }
     }
 }

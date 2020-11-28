@@ -21,7 +21,7 @@ namespace StudentApplicationApp
         private void LogInButtonClicked(object sender, EventArgs e)
         {
             ValidateLogIn(EmailField.Text, PasswordField.Text);
-        }
+        } 
 
         private async void CreateAccountButtonClicked(object sender, EventArgs e)
         {
@@ -60,7 +60,14 @@ namespace StudentApplicationApp
                 {
                     if (user.isStaff)
                     {
-                        await Navigation.PushAsync(new StaffMainPage(new Staff(user.Email, user.Password)));
+                        Staff userStaff = new Staff
+                        {
+                            Email = user.Email,
+                            Password = user.Password,
+                            isStaff = true,
+                        };
+
+                        await Navigation.PushAsync(new StaffMainPage(userStaff));
                     }
                     else
                     {

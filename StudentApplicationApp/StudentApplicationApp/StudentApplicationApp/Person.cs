@@ -53,7 +53,8 @@ namespace StudentApplicationApp.Persistence
         }
 
         /// <summary>
-        /// Virtual funciton. Not implemented here.
+        /// Virtual funciton. Not implemented here. because it should not be 
+        /// called in the parent
         /// </summary>
         public virtual void CreateAccount()
         {
@@ -61,7 +62,8 @@ namespace StudentApplicationApp.Persistence
         }
 
         /// <summary>
-        /// Virtual funciton. Not implemented here.
+        /// Virtual funciton. Not implemented here. because it should not be 
+        /// called in the parent
         /// </summary>
         public virtual void Log_In()
         {

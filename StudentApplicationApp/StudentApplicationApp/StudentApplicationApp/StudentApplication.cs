@@ -174,7 +174,6 @@ namespace StudentApplicationApp
         {
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
-            // TODO this doesn't seem to be replacing correctly
             await connection.InsertOrReplaceAsync(this);            
         }
     }

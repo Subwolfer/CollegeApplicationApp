@@ -1,10 +1,6 @@
 ﻿using StudentApplicationApp.Persistence;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,8 +32,6 @@ namespace StudentApplicationApp
                 this.Navigation.RemovePage(this.Navigation.NavigationStack.Last());
                 LogUserIn(newStudent);
             }
-
-            // create account failed
         }
 
         /// <summary>

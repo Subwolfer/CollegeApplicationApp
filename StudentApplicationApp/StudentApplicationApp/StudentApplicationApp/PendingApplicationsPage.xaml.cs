@@ -15,7 +15,7 @@ namespace StudentApplicationApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PendingApplicationsPage : ContentPage
     {
-        private ObservableCollection<StudentApplication> applications = new ObservableCollection<StudentApplication>();
+        private ObservableCollection<StudentApplication> studentApplications = new ObservableCollection<StudentApplication>();
         private SQLiteAsyncConnection connection;
 
         public PendingApplicationsPage()
@@ -29,5 +29,11 @@ namespace StudentApplicationApp
             connection.Table<StudentApplication>().ToListAsync();
             base.OnAppearing();
         }
+    }
+
+    public class PendingApplications
+    {
+        string StudentsEmail { get; set; }
+        StudentApplication application { get; set; }
     }
 }

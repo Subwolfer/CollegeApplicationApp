@@ -40,16 +40,14 @@ namespace StudentApplicationApp
         [MaxLength(10)]
         public string Zip { get; set; }
 
-        [MaxLength(20)]
+        // this would be a bool but SQLite doesnt' support bools. so 0 for false 1 for true
         public int? submitted { get; set; } = 0;
 
-        [Column("ApplicationFinalized")]
         // this would be a bool but SQLite doesnt' support bools. so 0 for false 1 for true
-        public int? applicationFinalized { get; set; }
+        public int? applicationFinalized { get; set; } = 0;
 
-        [Column("ApplicationAccepted")]
         // this would be a bool but SQLite doesnt' support bools. so 0 for false 1 for true
-        public int? accepted { get; set; }
+        public int? accepted { get; set; } = 0;
 
         /// <summary>
         /// 0 arg constructor required for SQLite connection

@@ -13,7 +13,9 @@
                 HorizontalOptions= "CenterAndExpand" 
                 FontAttributes="Bold"
                 FontSize="16"/>
-            <ListView x:Name="recipesListView">
+            <ListView x:Name="appliationsListView"
+                      ItemsSource="{Binding pendingApplications}"
+                      HorizontalOptions="CenterAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding studentName}"/>

@@ -29,7 +29,7 @@ namespace StudentApplicationApp
         {
             if (isEmailValid())
             {
-                // TODO Find out if we need to actually email?
+                DisplayAlert("Email Sent", "Well not really, but this is where it would be sent if we had real information to send.", "OK");
             }
         }
 

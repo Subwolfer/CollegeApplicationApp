@@ -53,48 +53,49 @@ namespace StudentApplicationApp
         /// </summary>
         /// <param name="sender">Go back button.</param>
         /// <param name="e">Button clicked event args.</param>
-        private void SubmitRegistration(object sender, EventArgs e)
+        private async void SubmitRegistration(object sender, EventArgs e)
         {
             StudentApplication completedApplication = GetApplicationData();
             var response = completedApplication.CompleteApplication();
             if (response == StudentApplication.ApplicationResult.Success)
             {
-                DisplayAlert("Application Submitted", "You can log in and check the status of your application at any time", "OK");
+                await DisplayAlert("Application Submitted", "You can log in and check the status of your application at any time", "OK");
+                await Navigation.PopAsync();
             }
             else
             {
                 switch (response)
                 {
                     case StudentApplication.ApplicationResult.MissingField:
-                        DisplayAlert("Missing Fields", "Please check and make sure all fields are filled out", "OK");
+                        await DisplayAlert("Missing Fields", "Please check and make sure all fields are filled out", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidFirstName:
-                        DisplayAlert("Invalid Field", "The first name field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The first name field is invalid, Please check the information entered", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidLastName:
-                        DisplayAlert("Invalid Field", "The last name field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The last name field is invalid, Please check the information entered", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidStreet:
-                        DisplayAlert("Invalid Field", "The street Address field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The street Address field is invalid, Please check the information entered", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidCity:
-                        DisplayAlert("Invalid Field", "The city field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The city field is invalid, Please check the information entered", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidState:
-                        DisplayAlert("Invalid Field", "The state field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The state field is invalid, Please check the information entered", "OK");
                         break;
 
                     case StudentApplication.ApplicationResult.InvalidZip:
-                        DisplayAlert("Invalid Field", "The zip code field is invalid, Please check the information entered", "OK");
+                        await DisplayAlert("Invalid Field", "The zip code field is invalid, Please check the information entered", "OK");
                         break;
 
                     default:
-                        DisplayAlert("Unkonwn", "An unkonwn error has occured when submitting the application", "OK");
+                        await DisplayAlert("Unkonwn", "An unkonwn error has occured when submitting the application", "OK");
                         break;
                 }
             }
@@ -127,7 +128,7 @@ namespace StudentApplicationApp
         private StudentApplication GetApplicationData()
         {
             return new StudentApplication{
-                Email = "",
+                Email = StudentUser.Email,
                 FirstName = this.FirstName.Text,
                 LastName = this.LastName.Text,
                 Street = this.Street.Text,

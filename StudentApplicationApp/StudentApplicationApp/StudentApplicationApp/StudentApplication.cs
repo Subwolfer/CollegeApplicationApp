@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace StudentApplicationApp
 {
-    class StudentApplication
+    public class StudentApplication
     {
         public enum ApplicationResult
         { 
@@ -40,11 +40,16 @@ namespace StudentApplicationApp
         [MaxLength(10)]
         public string Zip { get; set; }
 
-        public bool submitted { get; set; }
+        [MaxLength(20)]
+        public int? submitted { get; set; } = 0;
 
-        public bool applicationFinalized { get; set; }
+        [Column("ApplicationFinalized")]
+        // this would be a bool but SQLite doesnt' support bools. so 0 for false 1 for true
+        public int? applicationFinalized { get; set; }
 
-        public bool accepted { get; set; }
+        [Column("ApplicationAccepted")]
+        // this would be a bool but SQLite doesnt' support bools. so 0 for false 1 for true
+        public int? accepted { get; set; }
 
         /// <summary>
         /// 0 arg constructor required for SQLite connection
@@ -73,7 +78,7 @@ namespace StudentApplicationApp
             City = city;
             State = state;
             Zip = zip;
-            submitted = false;
+            submitted = 0;
         }
 
         public ApplicationResult CompleteApplication ()
@@ -81,7 +86,7 @@ namespace StudentApplicationApp
             var result = ValidateFields();
             if (result == ApplicationResult.Success)
             {
-                submitted = true;
+                submitted = 1;
                 SaveApplication();
             }
 

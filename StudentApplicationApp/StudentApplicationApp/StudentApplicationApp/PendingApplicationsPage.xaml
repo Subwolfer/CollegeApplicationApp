@@ -7,10 +7,16 @@
              x:Class="StudentApplicationApp.PendingApplicationsPage">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text=""
+                x:Name="Header"
+                VerticalOptions="Start" 
+                HorizontalOptions= "CenterAndExpand" 
+                FontAttributes="Bold"
+                FontSize="16"/>
             <ListView x:Name="recipesListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding StudentsEmail}"/>
+                        <TextCell Text="{Binding studentName}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

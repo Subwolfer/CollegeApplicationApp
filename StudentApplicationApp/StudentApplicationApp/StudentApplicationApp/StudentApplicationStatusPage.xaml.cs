@@ -26,7 +26,7 @@ namespace StudentApplicationApp
             if (savedApplication.Any())
             {
                 StudentApplication app = savedApplication[0];
-                if (app.submitted)
+                if (app.submitted == 1)
                 {
                     headerString = "Submitted Application";
                     this.StudentName.Text = app.FirstName + " " + app.LastName;
@@ -34,9 +34,9 @@ namespace StudentApplicationApp
                     this.AddressLine1.Text = app.Street;
                     this.AddressLien2.Text = app.City + " " + app.State + " " + app.Zip;
 
-                    if (app.applicationFinalized)
+                    if (app.applicationFinalized > 0)
                     {
-                        if (app.accepted)
+                        if (app.accepted > 0)
                         {
                             this.Status.Text = "Status = Accepted";
                         }

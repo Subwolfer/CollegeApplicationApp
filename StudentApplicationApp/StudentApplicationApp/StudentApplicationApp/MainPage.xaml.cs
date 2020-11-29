@@ -46,7 +46,7 @@ namespace StudentApplicationApp
             var connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
             // Make sure account doesn't exist before you create it.
-            var personsCollection = await connection.QueryAsync<Person>($"select * from Person where Email = \'{staffEmail}\'");
+            var personsCollection = await connection.QueryAsync<Person>($"select * from Person where Email = \"{staffEmail}\"");
             if (!personsCollection.Any())
             {
                 Person newStaff = new Person(staffEmail, staffPass);

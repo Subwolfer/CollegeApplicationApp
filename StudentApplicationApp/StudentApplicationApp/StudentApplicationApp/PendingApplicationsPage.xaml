@@ -15,6 +15,7 @@
                 FontSize="16"/>
             <ListView x:Name="appliationsListView"
                       ItemsSource="{Binding pendingApplications}"
+                      ItemSelected="appliationsListView_ItemSelected"
                       HorizontalOptions="CenterAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>

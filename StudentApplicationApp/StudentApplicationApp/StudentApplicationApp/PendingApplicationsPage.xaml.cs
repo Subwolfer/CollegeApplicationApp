@@ -31,6 +31,7 @@ namespace StudentApplicationApp
         /// </summary>
         protected async override void OnAppearing()
         {
+            pendingApplications = new ObservableCollection<PendingApplications>();
             var appCollection = await connection.QueryAsync<StudentApplication>("select * from StudentApplication");
 
             foreach (StudentApplication app in appCollection)
@@ -57,6 +58,23 @@ namespace StudentApplicationApp
             }
 
             base.OnAppearing();
+        }
+
+        private async void appliationsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            ListView appList = sender as ListView;
+            if (appList == null)
+            {
+                return;
+            }
+
+            PendingApplications pendingApp = appList.SelectedItem as PendingApplications;
+            if (pendingApp == null)
+            {
+                return;
+            }
+
+            await Navigation.PushAsync(new ApplicationDetailsPage(pendingApp.studentApp));
         }
     }
 
